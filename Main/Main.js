@@ -123,7 +123,7 @@ router.delete('/:id', async function (ctx) {
 //Update request to update a specific news sent as the id 
 router.put('/:id', async function (ctx) {
   //Get the id from the url
-  const id = ctx.param.id;
+  const id = ctx.params.id;
   //Get the news details from the body 
   let news = ctx.request.body;
   news = await newsToUpdate(id, news);
